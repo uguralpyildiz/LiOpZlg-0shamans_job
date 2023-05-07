@@ -510,11 +510,28 @@ i {
     margin: auto;
 }
 .container {
+    position: relative;
     max-width: 1300px;
     padding: 20px;
     margin: auto;
+    animation: opacity .5s ease;
+
 }
 
+.content{
+    position: relative;
+    animation: opacity .5s ease;
+}
+@keyframes opacity {
+    0%{
+        top: -50px; 
+
+    }
+    100%{
+        top: 0;
+
+    }
+}
 
 #wave{
     position: relative;
@@ -889,28 +906,30 @@ i {
     line-height: 35px;
     font-size: 18px;
 }
-.header-mind-container{
-    display: flex;
-    align-items: center;
-}
+
 
 .prev-link{
     padding: 10px;
-    background: #000000;
+    background: #000;
     border-radius: 5px 0 0 5px;
     box-shadow: 0 0 10px #00000010;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
 }
-
+.mind-back-text{
+    padding:0 10px;
+}
 .header-mind{
-    padding: 10px;
-    background: #313131;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px 0;
+    background: #353535;
     box-shadow: 0 0 10px #00000010;
-    width: 220px;
-    border-radius:0 5px 5px 0;
+    width: 200px;
+    border-radius:5px;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     color:#fff;
 }
 .tokens-img{
@@ -1079,4 +1098,36 @@ i {
 .map-container{
     width: 100%;
     margin: 70px 0;
+}
+
+.mind-alt-container{
+    background: #EBE7DF;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #00000010;
+}
+.mind-alt{
+    max-width: 800px;
+}
+
+.bling{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    border-bottom: 5px solid #00000010;
+}
+.bling span{
+    margin-bottom: 15px;
+    padding: 8px 15px;
+    color: #fff;
+    text-shadow: 0 5px 15px #00000050;
+    box-shadow: 0 0 15px #00000050;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.progress{
+    background: #30a203;
+}
+.exploring{
+    background: #d68b12;
 }

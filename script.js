@@ -1,73 +1,22 @@
-// const texts = ['alt yazı', 'yazı 123', 'deneme 432'];
-// var count = 0;
-// var index = 0;
-// var decrement = 0;
-// var currentText = '';
-// var letter = '';
+const values = document.querySelectorAll(".values")
+const xmark = document.querySelectorAll(".xmark")
 
-// function sleep(delay) {
-//     return new Promise(resolve => setTimeout(resolve, delay));
-// }
 
-// const typeWrite = async () => {
-//     if (count == texts.length) {
-//         count = 0;
-//     }
-//     currentWord = texts[count];
-//     currentLetter = currentWord.slice(0, ++index);
-//     document.querySelector(".job-bar").textContent = currentLetter;
-//     if (index == currentWord.length) {
-//         await sleep(1500);
-//         while (index > 0) {
-//             currentLetter = currentWord.slice(0, --index);
-//             document.querySelector(".job-bar").textContent = currentLetter;
-//             await sleep(50);
-//         }
-//         count++;
-//         index = 0;
-//         await sleep(500);
-//     }
-//     setTimeout(typeWrite, Math.random() * 200 + 50);
-// }
-// typeWrite();
+for (let i = 0; i < values.length; i++) {
+    values[i].addEventListener("click", () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        values[i].classList.add("active")
+        xmark[i].classList.add("active-x")
+    })
+    xmark[i].addEventListener("click", () => {
 
-// const downloadCv = document.querySelectorAll("#downloadCv");
-// const downloadText = document.querySelectorAll(".download-text");
-// const spinnerAnim = document.querySelector(".spinner-anim");
+        values[i].classList.remove("active")
+        xmark[i].classList.remove("active-x")
+    })
+    
+}
 
-// downloadCv[0].addEventListener("click", () => {
-//     downloadText[0].style.top = "-100px";
-//     downloadCv[0].style.pointerEvents = "none";
-//     setTimeout(() => {
-//         downloadCv[0].innerHTML = '<span class="spinner-anim"><svg class="spinner" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle></svg></span>'
-//     }, 250);
-
-//     setTimeout(() => {
-//         downloadCv[0].innerHTML = '<span class="download-text">Coming Soon</span>'
-//     }, 2500);
-
-//     setTimeout(() => {
-//         downloadCv[0].innerHTML = '<span class="download-text">SHOP</span>'
-//         downloadCv[0].style.pointerEvents = "auto";
-//     }, 7000);
-// })
-
-// downloadCv[1].addEventListener("click", () => {
-//     downloadText[1].style.top = "-100px";
-//     downloadCv[1].style.pointerEvents = "none";
-//     setTimeout(() => {
-//         downloadCv[1].innerHTML = '<span class="spinner-anim"><svg class="spinner" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle></svg></span>'
-//     }, 250);
-
-//     setTimeout(() => {
-//         downloadCv[1].innerHTML = '<span class="download-text">Coming Soon</span>'
-//     }, 2500);
-
-//     setTimeout(() => {
-//         downloadCv[1].innerHTML = '<span class="download-text">CONNECT</span>'
-//         downloadCv[1].style.pointerEvents = "auto";
-//     }, 7000);
-// })
 
 
 

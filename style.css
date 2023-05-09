@@ -40,6 +40,12 @@ nav{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.bg-light{
+    background: url(bg.png),linear-gradient(to bottom, #ffffff, #fffbef);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 .bg-dark-bg{
     background: url(bg-dar-bg.jpg),linear-gradient(to bottom, #ffffff, #fffbef);
     background-size: cover;
@@ -511,7 +517,7 @@ i {
 }
 .container {
     position: relative;
-    max-width: 1300px;
+    max-width: 1500px;
     padding: 20px;
     margin: auto;
     animation: opacity .5s ease;
@@ -799,7 +805,7 @@ i {
     padding: 20px 0;
     color: #353535;
     font-weight: 800;
-    font-size: 32px;
+    font-size: 22px;
 }
 .header-tokens span {
     color: #00000050;
@@ -911,10 +917,9 @@ i {
 .prev-link{
     padding: 10px;
     background: #000;
-    border-radius: 5px 0 0 5px;
     box-shadow: 0 0 10px #00000010;
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
 }
 .mind-back-text{
     padding:0 10px;
@@ -923,11 +928,9 @@ i {
     display: flex;
     align-items: center;
     justify-content: start;
-    padding: 10px 0;
     background: #353535;
     box-shadow: 0 0 10px #00000010;
-    width: 200px;
-    border-radius:5px;
+    width: 150px;
     text-align: center;
     font-size: 16px;
     color:#fff;
@@ -958,7 +961,12 @@ i {
     display: flex;
     gap: 20px;
 }
+.four-cards-h{
+    position: relative;
+}
 .four-cards-t{
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
@@ -976,14 +984,13 @@ i {
     overflow: hidden;
 }
 .card-mind{
-
-    position: relative;
+    
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: end;
     padding:0 20px;
-    height: 220px;
+    height: 260px;
     border-radius: 0px;
     margin: 3px 0;
     background: #EBE7DF;
@@ -994,7 +1001,7 @@ i {
     color: #353535;
 }
 .manifesto-text-container {
-    padding: 20px;
+    padding-right: 20px;
 }
 .card-mind:hover .container-mind{
     transform: scale(1.02);
@@ -1101,29 +1108,72 @@ i {
 }
 
 .mind-alt-container{
+    position: absolute;
+    top: -110%;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: #EBE7DF;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 15px #00000010;
+    overflow: auto;
+    z-index: 2;
+    transition: .3s ease all;
 }
 .mind-alt{
-    max-width: 800px;
+    max-width: 100%;
+    
 }
+button{
+    cursor: pointer;
+}
+
+.xmark{
+    position: absolute;
+    top: -10px;
+    right:20px;
+    z-index: 9;
+    transform: scale(0);
+    transition: .3s ease all;
+    transform-origin: top right;
+    cursor: pointer;
+}
+.xmark i{
+    position: relative;     
+    top: 0px;
+    left: 0px;
+    z-index: 9;       
+}
+
+.values.active .mind-alt-container {
+    top: 0;
+}
+.active-x {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+
 
 .bling{
     display: flex;
-    align-items: start;
-    flex-direction: column;
+    align-items: center;
+    justify-content: start;
     border-bottom: 5px solid #00000010;
 }
 .bling span{
-    margin-bottom: 15px;
-    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-left: 15px;
+    padding: 3px 7px;
     color: #fff;
-    text-shadow: 0 5px 15px #00000050;
+    width: auto;
     box-shadow: 0 0 15px #00000050;
     border-radius: 5px;
     font-size: 16px;
+    text-align: center;
 }
 .progress{
     background: #30a203;

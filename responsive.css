@@ -237,6 +237,15 @@
         }
 }
 @media only screen and (max-width: 880px) {
+    .bling {
+            flex-direction: column-reverse;
+            justify-content: start;
+            align-items: start;
+        }
+    
+        .bling span {
+            margin: 15px 0;
+        }
     .four-cards-t {
         flex-wrap: wrap;
     }
@@ -431,6 +440,7 @@
 }
 
 @media only screen and (max-width:550px) {
+    
     .four-cards {
             flex-direction: column;
             justify-content: center;
@@ -481,7 +491,8 @@
 @media only screen and (max-width:455px) {
 
     
-
+   
+   
 
     .nav-links {
         width: 300px;
@@ -505,6 +516,7 @@
         font-size: 14px;
         padding: 8px;
         border-radius: 5px;
+        margin-right: 0;
     }    
 
     .nav-link {

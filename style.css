@@ -517,7 +517,7 @@ i {
 }
 .container {
     position: relative;
-    max-width: 1500px;
+
     padding: 20px;
     margin: auto;
     animation: opacity .5s ease;
@@ -905,12 +905,13 @@ i {
 }
 .manifesto-text{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
+    width: 100;
     color: #fff;
     font-weight: 300;
     line-height: 35px;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 
@@ -954,15 +955,17 @@ i {
     margin-left: 25px;
 }
 .manifesto-text-container{
-    
+    max-width: 100%;
     margin: 20px 0;
 }
 .four-cards{
     display: flex;
     gap: 20px;
+    
 }
 .four-cards-h{
     position: relative;
+    
 }
 .four-cards-t{
     position: relative;
@@ -970,6 +973,7 @@ i {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
+    
 }
 .card-token{
     padding: 20px;
@@ -1103,8 +1107,8 @@ i {
 }
 
 .map-container{
-    width: 100%;
-    margin: 70px 0;
+    max-width: 1300px;
+    margin: 70px auto;
 }
 
 .mind-alt-container{

@@ -248,21 +248,20 @@
         }
     .four-cards-t {
         flex-wrap: wrap;
+
     }
         .w100 {
             width: 65%;
         }
         .card-mind {
             width: calc(50% - 10px);
+            
         }
     .manifesto-img{
         width: 100%;
         margin: 0;
     }
-    .manifesto-text{
-        justify-content: center;
-        text-align: center;
-    }
+
     
     .four-cards{
         /* flex-direction: column; */
@@ -360,8 +359,10 @@
     
         .card-mind {
             width: calc(100% - 10px);
-            height: 150px;
+            height: 180px;
+            margin-bottom: 30px;
         }
+       
         .mind-card-img{
             width: 90px;
         }
@@ -371,10 +372,7 @@
     .m-card {
             width: 100%;
         }
-        .manifesto-text{
-            text-align: center;
-            justify-content: center;
-        }
+   
     .four-cards {
             /* flex-direction: column; */
             justify-content: center;
@@ -440,6 +438,9 @@
 }
 
 @media only screen and (max-width:550px) {
+    .manifesto-text{
+        font-size: 18px;
+    }
     
     .four-cards {
             flex-direction: column;
@@ -461,7 +462,7 @@
         .header-team,
         .header-manifesto {
             font-size: 36px;
-            text-align: center;
+           
         }
     
         .card-token {
